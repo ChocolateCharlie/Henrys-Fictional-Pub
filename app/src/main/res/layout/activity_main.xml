@@ -1,18 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<!-- HENRY'S FICTIONAL PUB CARD -->
+<!-- By : ChocolateCharlie -->
+<!-- Last Updated : 01 - 01 - 2018 -->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.henrysfictionalpub.MainActivity">
 
+<!-- Banner image -->
+<ImageView
+    android:src="@drawable/henryspub"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    android:scaleType="centerCrop"
+    android:contentDescription="Picture of a counter"/>
+
+<!-- Name of the Business -->
     <TextView
+        android:text="Henry's Fictional Pub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="16dp"
+        android:fontFamily="serif"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="32sp" />
 
-</android.support.constraint.ConstraintLayout>
+<!-- Location of the Business -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            tools:ignore="contentDescription"
+            android:src="@drawable/locationicon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:text="34 Downtown street, Smalltown"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:fontFamily="serif"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+<!-- Type of Business -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:layout_margin="8dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            tools:ignore="contentDescription"
+            android:src="@drawable/infoicon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:text="Open everyday from 10am to 11pm"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:fontFamily="serif"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+<!-- About the Business -->
+    <TextView
+        android:text="About"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:fontFamily="serif"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="24sp" />
+
+    <TextView
+        android:text="This small pub is the perfect place to have a cool drink during a hot summer day or a nice hot meal in winter.
+If you're lucky enough, you'll probably meet an old man to tell you the story of the town."
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="serif"
+        android:textAlignment="textStart"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="16sp" />
+
+</LinearLayout>
